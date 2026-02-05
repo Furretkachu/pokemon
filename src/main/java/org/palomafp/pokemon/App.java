@@ -1,9 +1,7 @@
 package org.palomafp.pokemon;
 
 import org.palomafp.pokemon.modelo.Pokemon;
-import org.palomafp.pokemon.modelo.Estadisticas;
-import org.palomafp.pokemon.modelo.Genero;
-import org.palomafp.pokemon.modelo.Tipo;
+
 
 /**
  * Aplicación de Pokémon

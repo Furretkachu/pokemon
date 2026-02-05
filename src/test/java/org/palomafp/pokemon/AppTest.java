@@ -1,20 +1,18 @@
 package org.palomafp.pokemon;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Test;
+import org.palomafp.pokemon.modelo.Pokemon;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
+class AppTest {
+
+
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    void testpokemon() {
+
+        PokemonDAO pokemonDAO = new PokemonDAO();
+        Pokemon shuckle = pokemonDAO.getPokemon();
+        assertNotNull(shuckle, "El resultado no debe ser nulo, cuchurrumin");
     }
 }
