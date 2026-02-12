@@ -1,11 +1,10 @@
 package org.palomafp.pokemon;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 import org.palomafp.pokemon.modelo.Pokemon;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-class AppTest {
+class PokemonDAOTest {
 
 
     @Test
