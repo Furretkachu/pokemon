@@ -1,5 +1,8 @@
 package org.palomafp.pokemon;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.palomafp.pokemon.modelo.Estadisticas;
 import org.palomafp.pokemon.modelo.Genero;
 import org.palomafp.pokemon.modelo.Pokemon;
@@ -7,23 +10,45 @@ import org.palomafp.pokemon.modelo.Tipo;
 
 public class PokemonDAO {
     
-    public Pokemon getPokemon()
-    {
+    private List<Pokemon> listPokemon = null;
 
-        // Crear estadísticas para Shuckle
+    public PokemonDAO () {
+        
+        listPokemon = new ArrayList();
+        // Crear un Shuckle
         Estadisticas estadisticas = new Estadisticas(20, 10, 230, 10, 230, 5);
         
-        // Crear un Shuckle
+        
         Pokemon shuckle = new Pokemon(213, "Shuckle");
         shuckle.setEstadisticas(estadisticas);
         shuckle.setGenero(Genero.MACHO);
         
-        // Agregar tipos
         Tipo tipoRoca = new Tipo("Roca");
         Tipo tipoInsecto = new Tipo("Insecto");
         shuckle.addTipo(tipoRoca);
         shuckle.addTipo(tipoInsecto);
 
-        return shuckle;
+        listPokemon.add(shuckle);
+
+        // Crear un voltorb
+        Estadisticas estadisticas2 = new Estadisticas(40, 30, 50, 55, 55, 100);
+                
+        Pokemon Voltorb = new Pokemon(100, "Voltorb");
+        Voltorb.setEstadisticas(estadisticas2);
+        Voltorb.setGenero(Genero.DESCONOCIDO);
+
+        Tipo tipoElectrico = new Tipo("Electrico");
+        
+        Voltorb.addTipo(tipoElectrico);
+        
+
     }
+
+
+    public Pokemon getPokemonRandom()
+    {
+     return listPokemon.get(0);   
+    }
+
+
 }
