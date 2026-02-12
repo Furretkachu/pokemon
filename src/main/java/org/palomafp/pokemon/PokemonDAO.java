@@ -47,7 +47,11 @@ public class PokemonDAO {
 
     public Pokemon getPokemonRandom()
     {
-     return listPokemon.get(0);   
+        return listPokemon.get((int)(Math.random()+listPokemon.size()-1));   
+    }
+    public Pokemon getPokemonById(int id)
+    {
+        return listPokemon.get(id);
     }
 
 
