@@ -41,13 +41,27 @@ public class PokemonDAO {
         
         Voltorb.addTipo(tipoElectrico);
         
+        // Crear un rhydon
+        Estadisticas estadisticas3 = new Estadisticas(105, 130, 120, 45, 45, 40);
+                
+        Pokemon Rhydon = new Pokemon(112, "Rhydon");
+        Rhydon.setEstadisticas(estadisticas3);
+        Rhydon.setGenero(Genero.MACHO);
+
+        Tipo tipoTierra = new Tipo("Tierra");
+        
+        Rhydon.addTipo(tipoTierra);
+        Rhydon.addTipo(tipoRoca);
+
 
     }
 
 
     public Pokemon getPokemonRandom()
     {
-     return listPokemon.get(0);   
+     
+        return listPokemon.get(0);
+
     }
 
 
