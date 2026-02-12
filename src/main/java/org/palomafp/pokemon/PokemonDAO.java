@@ -17,8 +17,7 @@ public class PokemonDAO {
         listPokemon = new ArrayList();
         // Crear un Shuckle
         Estadisticas estadisticas = new Estadisticas(20, 10, 230, 10, 230, 5);
-        
-        
+              
         Pokemon shuckle = new Pokemon(213, "Shuckle");
         shuckle.setEstadisticas(estadisticas);
         shuckle.setGenero(Genero.MACHO);
@@ -59,9 +58,16 @@ public class PokemonDAO {
 
     public Pokemon getPokemonRandom()
     {
-     
         return listPokemon.get(0);
-
+    }
+    public List<Pokemon> getAllPokemon()
+    {
+        List<Pokemon> list = new ArrayList<>();
+        for (int i = 0; i < listPokemon.size(); i++) 
+        {
+            list.add(listPokemon.get(i));    
+        }   
+        return list;
     }
 
 
