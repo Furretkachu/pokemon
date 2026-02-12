@@ -11,7 +11,7 @@ class PokemonDAOTest {
     void testpokemon() {
 
         PokemonDAO pokemonDAO = new PokemonDAO();
-        Pokemon shuckle = pokemonDAO.getPokemon();
+        Pokemon shuckle = pokemonDAO.getPokemonRandom();
         assertNotNull(shuckle, "El resultado no debe ser nulo, cuchurrumin");
     }
 }
