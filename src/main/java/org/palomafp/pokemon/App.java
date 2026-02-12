@@ -15,24 +15,26 @@ public class App
         Scanner sc = new Scanner(System.in);
         //Generar el pokemon en pokemonDAO.java
         PokemonDAO pokemonDAO = new PokemonDAO();
+        Pokemon pokemon;
         boolean salir = false;
         int opcion;
 
         while(!salir)
         {
             System.out.println("-------------------------------"
-                            + "1. Mostrar Pokémon aleatorio"
+                            + "\n1. Mostrar Pokémon aleatorio"
                             + "\n2. Mostrar pokemon por nº de Pokédex"
                             + "\n3. Mostrar todos los Pokémon"
                             + "\n4. Salir >:("
-                            + "-------------------------------");
+                            + "\n-------------------------------");
             opcion = sc.nextInt();
 
             switch (opcion) {
                 case 1:
+                    pokemon = pokemonDAO.getPokemonRandom();
                     System.out.println("------------------------------------");
                     System.out.println("\n¡Se encontró un Pokémon salvaje!\n");
-                    System.out.println(pokemonDAO.getPokemonRamdom);
+                    System.out.println(pokemon);
                     System.out.println("------------------------------------");
                     break;
                 
@@ -40,9 +42,10 @@ public class App
                     System.out.print("Introduce el número de Pokédex del pokemon que quieres mostrar: ");
                     opcion = sc.nextInt();
                     try{
-                    System.out.println("------------------------------------");
-                        System.out.println(pokemonDAO.getPokemonById);
-                    System.out.println("------------------------------------");
+                        pokemon = pokemonDAO.getPokemonById(opcion);
+                        System.out.println("------------------------------------");
+                        System.out.println(pokemon);
+                        System.out.println("------------------------------------");
                     }catch(Exception e)
                     {
                         System.err.println("ERROR: " + e);
@@ -51,13 +54,19 @@ public class App
 
                 case 3:
                     System.out.println("------------------------------------");
-                    System.out.println(pokemonDAO.getAllPokemon);
+                    for(Pokemon pok : pokemonDAO.getAllPokemon())
+                    {
+                        System.out.println("------------------------------------");
+                        System.out.println(pok);
+                        System.out.println("------------------------------------");
+                    }
                     System.out.println("------------------------------------");
                     break;
 
                 case 4:
                     salir = true;
                     System.err.println("Saliendo...");
+                    break;
                 default:
                     System.err.println("ERROR: Opción no válida");
                     break;

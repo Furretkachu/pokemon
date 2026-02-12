@@ -39,6 +39,7 @@ public class PokemonDAO {
         Tipo tipoElectrico = new Tipo("Electrico");
         
         Voltorb.addTipo(tipoElectrico);
+        listPokemon.add(Voltorb);
         
         // Crear un rhydon
         Estadisticas estadisticas3 = new Estadisticas(105, 130, 120, 45, 45, 40);
@@ -51,6 +52,7 @@ public class PokemonDAO {
         
         Rhydon.addTipo(tipoTierra);
         Rhydon.addTipo(tipoRoca);
+        listPokemon.add(Rhydon);
 
 
     }
@@ -58,7 +60,7 @@ public class PokemonDAO {
 
     public Pokemon getPokemonRandom()
     {
-        return listPokemon.get((int)(Math.random()+listPokemon.size()-1));   
+        return listPokemon.get((int)(Math.random() * listPokemon.size()));   
     }
 
     
@@ -75,6 +77,16 @@ public class PokemonDAO {
 
     public Pokemon getPokemonById(int id)
     {
+        int cont = 0;
+        for(Pokemon pok : listPokemon)
+        {
+            if(pok.getNumPokedex() == id) {
+                id = cont;
+                break;
+            }
+            cont++;
+
+        }
         return listPokemon.get(id);
     }
 
