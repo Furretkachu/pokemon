@@ -8,10 +8,15 @@ import org.palomafp.pokemon.modelo.Genero;
 import org.palomafp.pokemon.modelo.Pokemon;
 import org.palomafp.pokemon.modelo.Tipo;
 
+/**
+ * Clase de acceso a los datos
+ */
 public class PokemonDAO {
-    
+    //Lista que almacena todos nuestros Pokémon
     private List<Pokemon> listPokemon = null;
-
+    /**
+     * Constructor de la clase, genera los Pokémon
+     */
     public PokemonDAO () {
         
         listPokemon = new ArrayList();
@@ -57,13 +62,19 @@ public class PokemonDAO {
 
     }
 
-
+    /**
+     * Metodo para generar un Pokémon de manera aleaotria entre los almacenados
+     * @return devuelve una instancia tipo Pokemon del Pokémon generado
+     */
     public Pokemon getPokemonRandom()
     {
         return listPokemon.get((int)(Math.random() * listPokemon.size()));   
     }
 
-    
+    /**
+     * Metodo para generar una lista de todos los Pokémon almacenados
+     * @return devuelve la lista de objetos Pokémon generada
+     */
     public List<Pokemon> getAllPokemon()
     {
         List<Pokemon> list = new ArrayList<>();
@@ -75,6 +86,11 @@ public class PokemonDAO {
     }
 
 
+    /**
+     * Metodo para buscar un Pokémon por su id (número de Pokédex)
+     * @param id Número de Pokédex del Pokémon a buscar
+     * @return devuelve el Pokémon correspondiente al numero indicado
+     */
     public Pokemon getPokemonById(int id)
     {
         int cont = 0;

@@ -10,13 +10,21 @@ import org.palomafp.pokemon.modelo.Pokemon;
  */
 public class App 
 {
+    /**
+     * Main, clase principal
+     * @param args argumoentos que se pasarian al ejecutar por terminal
+     */
     public static void main( String[] args )
     {
+        //Scanner
         Scanner sc = new Scanner(System.in);
-        //Generar el pokemon en pokemonDAO.java
+        //Objeto de acceso de datos
         PokemonDAO pokemonDAO = new PokemonDAO();
+        //Instancia del pokemon regu+istrado actualmente
         Pokemon pokemon;
+        //Boolean para el bucle
         boolean salir = false;
+        //Opciones del menu
         int opcion;
 
         while(!salir)
@@ -72,7 +80,5 @@ public class App
                     break;
             }
         }
-        // Mostrar información del Pokémon
-        
     }
 }
