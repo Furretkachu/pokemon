@@ -5,8 +5,8 @@
 *.jar
 
 # Build directories
-target/
-!target/site/
+target/*
+!target/site
 
 # VS Code
 .vscode/*
