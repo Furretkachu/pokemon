@@ -6,6 +6,7 @@
 
 # Build directories
 target/
+!target/site/
 
 # VS Code
 .vscode/*

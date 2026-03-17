@@ -74,32 +74,32 @@ public class Estadisticas {
 
     /**
      * Método set del valor de la salud
-     * @param nombre recibe el valor de salud a establecer como parametro de entrada
+     * @param hp recibe el valor de salud a establecer como parametro de entrada
      */
     public void setHp(int hp) { this.hp = hp; }
     /**
      * Método set del valor del ataque fisico
-     * @param nombre recibe el valor del ataque fisico a establecer como parametro de entrada
+     * @param atk recibe el valor del ataque fisico a establecer como parametro de entrada
      */
     public void setAtk(int atk) { this.atk = atk; }
     /**
      * Método set del valor de la defensa fisica
-     * @param nombre recibe el valor de la defensa fisica a establecer como parametro de entrada
+     * @param def recibe el valor de la defensa fisica a establecer como parametro de entrada
      */
     public void setDef(int def) { this.def = def; }
     /**
      * Método set del valor del ataque especial
-     * @param nombre recibe el valor del ataque especial a establecer como parametro de entrada
+     * @param atkSp recibe el valor del ataque especial a establecer como parametro de entrada
      */
     public void setAtkSp(int atkSp) { this.atkSp = atkSp; }
     /**
      * Método set del valor de la defensa especial
-     * @param nombre recibe el valor de la defensa especial a establecer como parametro de entrada
+     * @param defSp recibe el valor de la defensa especial a establecer como parametro de entrada
      */
     public void setDefSp(int defSp) { this.defSp = defSp; }
     /**
      * Método set del valor de la velocidad
-     * @param nombre recibe el valor de velocidad a establecer como parametro de entrada
+     * @param spe recibe el valor de velocidad a establecer como parametro de entrada
      */
     public void setSpe(int spe) { this.spe = spe; }
 

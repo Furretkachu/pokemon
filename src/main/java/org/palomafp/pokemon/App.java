@@ -11,6 +11,12 @@ import org.palomafp.pokemon.modelo.Pokemon;
 public class App 
 {
     /**
+     * Constructor por defecto
+     */
+    public App() {
+    }
+
+    /**
      * Main, clase principal
      * @param args argumoentos que se pasarian al ejecutar por terminal
      */

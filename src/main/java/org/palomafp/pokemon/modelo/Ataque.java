@@ -19,6 +19,12 @@ public class Ataque {
 
     /**
      * Constructor con todos los parametros del ataque
+     * @param nombre el nombre del ataque
+     * @param danyo el daño que causa el ataque
+     * @param precision la precisión del ataque
+     * @param pp los puntos de poder del ataque
+     * @param tipo el tipo del ataque
+     * @param efecto el efecto del ataque
      */
     public Ataque(String nombre, int danyo, int precision, int pp, Tipo tipo, Efecto efecto) {
         this.nombre = nombre;
