@@ -41,7 +41,14 @@ public class App
                             + "\n3. Mostrar todos los Pokémon"
                             + "\n4. Salir >:("
                             + "\n-------------------------------");
-            opcion = sc.nextInt();
+            
+            try {
+                opcion = sc.nextInt();
+            }
+            catch (Exception e) {
+                opcion = -1;
+                sc.nextLine();
+            }
 
             switch (opcion) {
                 case 1:
