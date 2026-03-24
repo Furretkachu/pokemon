@@ -14,7 +14,7 @@ public class Ataque {
     private int pp;
     //Indica el tipo del ataque, este determina sus eficacias, ineficacias...
     private Tipo tipo;
-    //Tipo de efecto del movimiento (Físico, Especioal o de estado)
+    //Tipo de efecto del movimiento (Físico, Especial o de estado)
     private Efecto efecto;
 
     /**

@@ -63,7 +63,7 @@ public class PokemonDAO {
     }
 
     /**
-     * Metodo para generar un Pokémon de manera aleaotria entre los almacenados
+     * Metodo para generar un Pokémon de manera aleatoria entre los almacenados
      * @return devuelve una instancia tipo Pokemon del Pokémon generado
      */
     public Pokemon getPokemonRandom()
