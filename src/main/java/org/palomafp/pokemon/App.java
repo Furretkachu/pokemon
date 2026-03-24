@@ -36,6 +36,7 @@ public class App
         while(!salir)
         {
             System.out.println("-------------------------------"
+                            + "\nNº Pokémon: " + pokemonDAO
                             + "\n1. Mostrar Pokémon aleatorio"
                             + "\n2. Mostrar pokemon por nº de Pokédex"
                             + "\n3. Mostrar todos los Pokémon"

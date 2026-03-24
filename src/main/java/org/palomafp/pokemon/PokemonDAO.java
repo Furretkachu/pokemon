@@ -106,5 +106,14 @@ public class PokemonDAO {
         return listPokemon.get(id);
     }
 
+    @Override
+    public String toString() {
+        String strg = listPokemon.size() + ": | ";
+        for (Pokemon p : listPokemon) {
+            
+            strg += p.getNumPokedex() + " | ";
+        }
+        return  strg;
+    }
 
 }
