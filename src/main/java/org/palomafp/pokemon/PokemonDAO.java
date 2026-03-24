@@ -19,7 +19,7 @@ public class PokemonDAO {
      */
     public PokemonDAO () {
         
-        listPokemon = new ArrayList();
+        listPokemon = new ArrayList<>();
         // Crear un Shuckle
         Estadisticas estadisticas = new Estadisticas(20, 10, 230, 10, 230, 5);
               
